@@ -22,7 +22,7 @@ pipeline {
     post {
         always {
             recordIssues(
-                enabledForFailure: true, aggregatingResults: true,
+                enabledForFailure: true, aggregatingResults: false,
                 tools: [java(), checkStyle(pattern: '**/checkstyle-result.xml', reportEncoding: 'UTF-8')]
             )
         }
