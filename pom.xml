@@ -72,7 +72,14 @@
 <!--					<configLocation>checkstyle.xml</configLocation>-->
 <!--					<outputFile>checkstyle-result.xml</outputFile>-->
 				</configuration>
-
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>findbugs-maven-plugin</artifactId>
+				<version>3.0.4</version>
+				<configuration>
+					<effort>Max</effort>
+				</configuration>
 			</plugin>
 		</plugins>
 	</reporting>

@@ -22,8 +22,9 @@ pipeline {
     post {
         always {
             recordIssues(
-                enabledForFailure: true, aggregatingResults: false,
-                tools: [java(), checkStyle(pattern: '**/checkstyle-result.xml', reportEncoding: 'UTF-8')]
+                enabledForFailure: true, aggregatingResults: true,
+                tools: [checkStyle(pattern: '**/checkstyle-result.xml', reportEncoding: 'UTF-8'),
+                        spotBugs(pattern: '**/target/findbugsXml.xml')]
             )
         }
     }
