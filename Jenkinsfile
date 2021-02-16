@@ -24,7 +24,7 @@ pipeline {
             recordIssues(
                 enabledForFailure: true, aggregatingResults: true,
                 tools: [checkStyle(pattern: '**/checkstyle-result.xml', reportEncoding: 'UTF-8'),
-                        spotBugs(pattern: '**/target/findbugsXml.xml')]
+                        spotBugs(pattern: '**/findbugsXml.xml')]
             )
         }
     }
